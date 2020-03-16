@@ -1,22 +1,84 @@
-<!--Demo embed of a Google Sheet in an HTML Page-->
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<title>Test Google Sheet</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>EHH - Website + Live Sheet Hybrid [test]</title>
+
+  <!-- Bootstrap core CSS -->
+  <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
 </head>
-<style>
- 
-.iframe-container{
-   height:1080;
-   
-   width: 100%;
-}
-</style>
+
 <body>
-    <div>
-        <iframe  class="iframe-container" src="https://docs.google.com/spreadsheets/d/1v9bWskUcteT2-aN79QPkHLB-blM5NffaDUU4_o7FD0Y/edit?widget=false&amp;headers=false&amp;chrome=false"></iframe></body>
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">EHH Ver0.1</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onclick="Home()">EHH
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Self Invite</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="Mission()" >Mission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</html>
+
+    
+
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Welcome to EHH</h1>
+        <p class="lead">Everything happens here! One Sheet for all Problems!</p>
+        <ul class="list-unstyled">
+          <li>Send Bulkd Emails</li>
+          <li>Monitor Analytics</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="container bg-white" style="height: 50px;"></div>
+      <div class="embed-responsive embed-responsive-16by9 overflow-hidden">
+        <iframe id= "sheetsFrame"  src="https://docs.google.com/spreadsheets/d/1JqWfce-zah3u1RK8IHIjC-zoQY3kOs9NdfJVAfZpZCw/?rm=minimal"></iframe>
+      </div>
+      
+</div>
+<div class="container-fluid fixed-bottom bg-white" style="height: 50px;"></div>
+    
+<script>
+    function Mission() {
+      document.getElementById("sheetsFrame").src = "https://docs.google.com/spreadsheets/d/1JqWfce-zah3u1RK8IHIjC-zoQY3kOs9NdfJVAfZpZCw/edit#gid=1070027851/?rm=minimal";
+    }
+    function Home() {
+      document.getElementById("sheetsFrame").src = "https://docs.google.com/spreadsheets/d/1JqWfce-zah3u1RK8IHIjC-zoQY3kOs9NdfJVAfZpZCw/?rm=minimal";
+    }
+    </script>
+    <!--Required JS & Jquery files for Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
