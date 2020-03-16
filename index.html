@@ -32,7 +32,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Self Invite</a>
+            <a class="nav-link" href="#" onclick="SelfInvite()">Self Invite</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" onclick="Mission()" >Mission</a>
@@ -71,10 +71,13 @@
     
 <script>
     function Mission() {
-      document.getElementById("sheetsFrame").src = "https://docs.google.com/spreadsheets/d/1JqWfce-zah3u1RK8IHIjC-zoQY3kOs9NdfJVAfZpZCw/edit#gid=1070027851/?rm=minimal";
+      document.getElementById("sheetsFrame").src = "https://docs.google.com/spreadsheets/d/1JqWfce-zah3u1RK8IHIjC-zoQY3kOs9NdfJVAfZpZCw/edit#gid=1070027851/?&chrome=false&rm=minimal";
     }
     function Home() {
-      document.getElementById("sheetsFrame").src = "https://docs.google.com/spreadsheets/d/1JqWfce-zah3u1RK8IHIjC-zoQY3kOs9NdfJVAfZpZCw/?rm=minimal";
+      document.getElementById("sheetsFrame").src = "https://docs.google.com/spreadsheets/d/1JqWfce-zah3u1RK8IHIjC-zoQY3kOs9NdfJVAfZpZCw/?&chrome=false&rm=minimal";
+    }
+    function SelfInvite() {
+      document.getElementById("sheetsFrame").src = "https://docs.google.com/spreadsheets/d/1_EH7lrqLPpTCZuu7W-XrnQhts_CrwaT9tKGod7sGBlI/edit?&chrome=false&rm=minimal";
     }
     </script>
     <!--Required JS & Jquery files for Bootstrap-->
